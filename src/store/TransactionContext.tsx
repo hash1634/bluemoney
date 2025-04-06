@@ -1,6 +1,7 @@
+
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { Transaction, Person, TransactionType } from "@/types";
-import { toast } from "sonner";
+import { toast } from "@/components/ui/sonner";
 
 interface TransactionContextType {
   transactions: Transaction[];
