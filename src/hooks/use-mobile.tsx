@@ -30,3 +30,16 @@ export function useIsCapacitor() {
   
   return isCapacitor
 }
+
+export function useDevice() {
+  const isMobile = useIsMobile()
+  const isCapacitor = useIsCapacitor()
+  
+  return {
+    isMobile,
+    isCapacitor,
+    isNative: isCapacitor,
+    isBrowser: !isCapacitor,
+    isDesktop: !isMobile
+  }
+}
